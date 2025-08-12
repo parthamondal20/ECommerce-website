@@ -1,0 +1,60 @@
+.order-address-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fdfdfd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.address-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.address-form label {
+  font-weight: 500;
+}
+
+.placeOrder {
+  background-color: #27b64d;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.placeOrder:hover {
+  background-color: #0f9332;
+}
+
+
+@media (max-width: 480px) {
+  .order-address-container {
+    margin: 20px 12px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .address-form input {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .placeOrder {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,80 @@
+.edit-profile-section {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffffcc;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-profile-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: #444;
+}
+
+.edit-profile-section label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.edit-profile-section input {
+    padding: 10px 14px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.edit-profile-section input:focus {
+    border-color: #6366f1;
+    outline: none;
+}
+
+.edit-profile-section button {
+    padding: 12px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-section button:hover {
+    background-color: #4f46e5;
+}
+
+
+@media (max-width: 480px) {
+    .edit-profile-section {
+        margin: 20px 10px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .edit-profile-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .edit-profile-section input {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+
+    .edit-profile-section button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}

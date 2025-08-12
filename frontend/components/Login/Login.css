@@ -1,0 +1,184 @@
+/* Form.css */
+
+.form {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.registerPage {
+  color: #007bff;
+  font-size: 16px;
+}
+
+.registerPage:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.OR {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+}
+
+.OR::before,
+.OR::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.OR::before {
+  left: 0;
+}
+
+.OR::after {
+  right: 0;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px;
+  /* space for eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+.forget-message {
+  color: #007bff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.forget-message:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .form {
+    margin: 40px 16px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .login-submit-btn,
+  .google-btn {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  .registerPage,
+  .forget-message,
+  .OR {
+    font-size: 14px;
+  }
+
+  .google-btn {
+    gap: 8px;
+  }
+
+  .eye-icon {
+    font-size: 16px;
+    right: 10px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+}

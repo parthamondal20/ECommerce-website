@@ -1,0 +1,176 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  background: var(--bg-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  gap: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box:focus {
+  border-color: #007bff;
+}
+
+.nav-links {
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  width: 150px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: flex;
+  /* ← FLEXBOX added */
+  align-items: center;
+  /* ← Vertically center image + text */
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  /* ← controlled spacing */
+  margin: 0;
+  /* ← remove default spacing */
+  text-align: left;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  width: 100%;
+  max-width: 400px;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f7f7f7;
+}
+
+.search-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}

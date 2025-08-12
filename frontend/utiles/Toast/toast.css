@@ -1,0 +1,88 @@
+/* Base toast style for all toasts */
+.Toastify__toast {
+  position: relative !important;
+  padding: 1rem 1.5rem !important;
+  padding-right: 3rem !important; /* Extra padding on right for close button */
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 60px !important;
+  line-height: 1.4 !important;
+}
+
+/* ✅ Success toast - using DEFAULT react-toastify class */
+.Toastify__toast--success {
+  background-color: #e6fffa !important; /* soft teal */
+  color: #035f5e !important;
+  border-left: 6px solid #2dd4bf !important;
+}
+
+/* ❌ Error toast - using DEFAULT react-toastify class */
+.Toastify__toast--error {
+  background-color: #1f2937 !important; /* dark background */
+  color: #f87171 !important;
+  border-left: 6px solid #ef4444 !important;
+}
+
+/* FIXED: Close button properly positioned in top-right */
+.Toastify__close-button {
+  position: absolute !important;
+  top: 50% !important;
+  right: 12px !important;
+  transform: translateY(-50%) !important;
+  opacity: 0.8 !important;
+  color: inherit !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 1000 !important;
+  line-height: 1 !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
+
+/* Alternative: If you want it in actual top-right corner */
+.Toastify__close-button--top-right {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  transform: none !important;
+}
+
+/* Ensure toast body content is visible and doesn't overlap close button */
+.Toastify__toast-body {
+  flex: 1 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-right: 0 !important; /* Let the toast handle the padding */
+}
+
+/* Toast container z-index */
+.Toastify__toast-container {
+  z-index: 9999 !important;
+}
+
+/* Success toast close button color override */
+.Toastify__toast--success .Toastify__close-button {
+  color: #035f5e !important;
+}
+
+/* Error toast close button color override */
+.Toastify__toast--error .Toastify__close-button {
+  color: #f87171 !important;
+}
