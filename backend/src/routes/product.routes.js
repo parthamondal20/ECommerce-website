@@ -21,7 +21,7 @@ import authenticateUser from "../middlewares/authenticateUser.js";
 const router = Router();
 router.get("/", getProducts);
 router.get("/suggestions", getProductSuggestions);
-router.get("/:id", getProductById);
+router.get("/product-details/:id", getProductById);
 router.get("/review-list/:productId", getProductReviewList);
 router.use(authenticateUser);
 router.post("/addToCart", addProductIncart);
