@@ -18,7 +18,7 @@ const getAllProducts = async (category = "", sort = "", query = "") => {
 
 const getProductInfo = async ({ params }) => {
   try {
-    const res = await api.get(`/products//product-details/${params.productId}`);
+    const res = await api.get(`/products/product-details/${params.productId}`);
     return res.data.data;
   } catch (error) {
     console.log("failed to fetch data");
