@@ -15,7 +15,7 @@ dotenv.config({
 app.use(express.json());
 app.use(
   cors({
-    origin:"https://e-commerce-website-frontend-iota.vercel.app",
+    origin: "https://e-commerce-website-frontend-iota.vercel.app",
     credentials: true,
   })
 );
