@@ -48,7 +48,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
   const options = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax", // ✅ REQUIRED for cross-origin cookies
+    sameSite: "none", // ✅ REQUIRED for cross-origin cookies
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   };
@@ -128,7 +128,7 @@ const verifyOtp = asyncHandler(async (req, res) => {
   const options = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax", // ✅ REQUIRED for cross-origin cookies
+    sameSite: "none", // ✅ REQUIRED for cross-origin cookies
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   };
@@ -210,7 +210,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const options = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax", // ✅ REQUIRED for cross-origin cookies
+    sameSite: "none", // ✅ REQUIRED for cross-origin cookies
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   };
@@ -282,7 +282,7 @@ const authWithGoogle = asyncHandler(async (req, res) => {
   const options = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax", // ✅ REQUIRED for cross-origin cookies
+    sameSite: "none", // ✅ REQUIRED for cross-origin cookies
     path: "/",
     maxAge: 7 * 24 * 60 * 60 * 1000,
   };
