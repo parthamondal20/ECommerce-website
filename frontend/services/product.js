@@ -22,6 +22,7 @@ const getProductInfo = async ({ params }) => {
     return res.data.data;
   } catch (error) {
     console.log("failed to fetch data");
+    throw error;
   }
 };
 
