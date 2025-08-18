@@ -151,10 +151,3 @@ See the `LICENSE` file in the repository.
 ## Author
 
 Partha Mondal
-
---
-
-If you want, I can also add a short Getting Started script or a sample `.env.example` file for the backend. Tell me which format you'd prefer.
-README.md
-Open with Google Docs
-Displaying README.md.
