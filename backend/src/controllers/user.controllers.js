@@ -480,7 +480,7 @@ const saveUserAddress = asyncHandler(async (req, res) => {
 });
 
 const getAllOrders = asyncHandler(async (req, res) => {
-  const userId = req.user?._id;
+  const {userId}=req.params;
 
   const user = await User.findById(userId).populate({
     path: "orderList",
