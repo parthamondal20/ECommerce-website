@@ -28,7 +28,7 @@ router.post("/send-otp", sendOtp);
 router.post("/verify-otp", verifyOtp);
 router.route("/logout").post(logoutUser);
 router.post("/reset-password", resetPassword);
-router.use(authenticateUser);
+// router.use(authenticateUser);
 router.route("/myCart/:id").get(getUserCart);
 router.delete("/myCart/remove/:userId/:productId", removeFromCart);
 router.put("/update-cart-quantity", updateCartQuantity);
