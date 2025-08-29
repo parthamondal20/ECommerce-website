@@ -31,6 +31,7 @@ This repository contains a Node.js + Express backend and a React + Vite frontend
 - Payment integration with Razorpay
 - Image uploads using Cloudinary
 - Email notifications via Nodemailer
+- WhatsApp integration for quick product sharing
 - Seed data scripts to populate products and coupons
 
 ## Tech stack
