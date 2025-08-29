@@ -381,7 +381,7 @@ const getUserCart = asyncHandler(async (req, res) => {
 });
 
 const removeFromCart = asyncHandler(async (req, res) => {
-  const userId = req.user?._id;
+  const {userId }= req.params;
   const productId = req.params.productId;
   const user = await User.findById(userId);
   if (!user) {
