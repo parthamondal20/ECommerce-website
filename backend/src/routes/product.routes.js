@@ -23,7 +23,7 @@ router.get("/", getProducts);
 router.get("/suggestions", getProductSuggestions);
 router.get("/product-details/:id", getProductById);
 router.get("/review-list/:productId", getProductReviewList);
-router.use(authenticateUser);
+// router.use(authenticateUser);
 router.post("/addToCart", addProductIncart);
 router.get("/myWishlist/:userId", getWishlist);
 router.post("/addToWishlist", addToWishList);
