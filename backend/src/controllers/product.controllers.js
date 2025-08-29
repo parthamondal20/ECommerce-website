@@ -10,7 +10,7 @@ function escapeRegex(string) {
 }
 
 const getProducts = asyncHandler(async (req, res) => {
-  const { category, sort, query } = req.query;
+  const { category="", sort="", query="" } = req.query;
   let filter = {};
   if (category) {
     filter.category = category;
