@@ -360,9 +360,9 @@ const uploadAvatar = asyncHandler(async (req, res) => {
 });
 
 const getUserCart = asyncHandler(async (req, res) => {
-  const user = req.user;
+  const {id} = req.params;
   // 🧱 Fetch user + populate full product info from cartList
-  const userData = await User.findById(user._id).populate({
+  const userData = await User.findById(id).populate({
     path: "cartList",
     populate: {
       path: "product",
