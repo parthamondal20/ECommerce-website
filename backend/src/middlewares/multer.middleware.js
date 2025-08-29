@@ -1,12 +1,21 @@
 import multer from "multer";
+import path from "path";
+import fs from "fs";
+
 const storage = multer.diskStorage({
-  // it will have the access of the temp file
   destination: function (req, file, cb) {
-    cb(null, "../../public/temp");
+    const uploadPath = path.resolve("./public/temp"); // absolute path
+
+    // ✅ Auto-create the folder if it doesn't exist
+    if (!fs.existsSync(uploadPath)) {
+      fs.mkdirSync(uploadPath, { recursive: true });
+      console.log("Created missing folder:", uploadPath);
+    }
+
+    cb(null, uploadPath);
   },
   filename: function (req, file, cb) {
-    const filePath = `../../public/temp/${file.originalname}`;
-    console.log(filePath);
+    console.log("Saving file as:", file.originalname);
     cb(null, file.originalname);
   },
 });
