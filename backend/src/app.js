@@ -22,7 +22,7 @@ app.use(
 app.use(cookieParser());
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/products", productRouter);
-app.use("/api/v1/payment", authenticateUser, paymentRouter);
-app.use("/api/v1/order", authenticateUser, orderRouter);
+app.use("/api/v1/payment",  paymentRouter);
+app.use("/api/v1/order",orderRouter);
 app.use(errorHandler);
 export { app };
