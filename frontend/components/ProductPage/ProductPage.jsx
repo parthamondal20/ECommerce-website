@@ -43,7 +43,7 @@ function ProductPage() {
   useEffect(() => {
     fetchProductDetails();
     fetchReviewList();
-  }, []);
+  }, [productId]);
 
   useEffect(() => {
     document.body.style.overflow = showSizeChart ? "hidden" : "auto";
