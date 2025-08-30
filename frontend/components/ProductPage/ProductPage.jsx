@@ -538,8 +538,8 @@ function ProductPage() {
 
                 <div className="reviews-list">
                   {reviewList.length > 0
-                    ? reviewList.map((review, index) => (
-                        <div className="review-card" key={index}>
+                    ? reviewList.map((review, index) => review.user._id && (
+                        <div className="review-card" key={review.user._id}>
                           {user._id && review.user._id === user._id && (
                             <button
                               className="delete-review-btn"
