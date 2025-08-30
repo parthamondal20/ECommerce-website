@@ -540,7 +540,7 @@ function ProductPage() {
                   {reviewList.length > 0
                     ? reviewList.map((review, index) => (
                         <div className="review-card" key={index}>
-                          {review.user._id === user._id && (
+                          {user._id && review.user._id === user._id && (
                             <button
                               className="delete-review-btn"
                               onClick={() => deleteUserReview(review._id)}
