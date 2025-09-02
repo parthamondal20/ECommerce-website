@@ -42,30 +42,30 @@ function PaymentPage() {
         amount: order.totalAmount,
       });
 
-      const methodOptions = {
-        card: false,
-        upi: false,
-        netbanking: false,
-        wallet: false,
-      };
+      // const methodOptions = {
+      //   card: false,
+      //   upi: false,
+      //   netbanking: false,
+      //   wallet: false,
+      // };
 
-      if (paymentMethod === "Card") {
-        methodOptions.card = true;
-      } else if (paymentMethod === "Netbanking") {
-        methodOptions.netbanking = true;
-      } else if (paymentMethod === "UPI") {
-        methodOptions.upi = true;
-      } else if (paymentMethod === "Wallet") {
-        methodOptions.wallet = true;
-      } else {
-        methodOptions.card =
-          methodOptions.upi =
-          methodOptions.netbanking =
-          methodOptions.wallet =
-            true;
-      }
+      // if (paymentMethod === "Card") {
+      //   methodOptions.card = true;
+      // } else if (paymentMethod === "Netbanking") {
+      //   methodOptions.netbanking = true;
+      // } else if (paymentMethod === "UPI") {
+      //   methodOptions.upi = true;
+      // } else if (paymentMethod === "Wallet") {
+      //   methodOptions.wallet = true;
+      // } else {
+      //   methodOptions.card =
+      //     methodOptions.upi =
+      //     methodOptions.netbanking =
+      //     methodOptions.wallet =
+      //       true;
+      // }
 
-      console.log("this is data", data);
+      // console.log("this is data", data);
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: data.amount,
@@ -76,7 +76,7 @@ function PaymentPage() {
         order_id: data.id,
         handler: async function (response) {
           try {
-            console.log("handler", response);
+            // console.log("handler", response);
             const paymentData = {
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_order_id: response.razorpay_order_id,
@@ -116,7 +116,7 @@ function PaymentPage() {
           email: user.email,
           contact: "9999999999",
         },
-        method: methodOptions,
+        // method: methodOptions,
         theme: {
           color: "#3399cc",
         },
@@ -214,10 +214,10 @@ function PaymentPage() {
         onChange={(e) => setPaymentMod(e.target.value)}
       >
         <option value="cash on delivery">Cash on Delivery</option>
-        <option value="UPI">UPI</option>
-        <option value="Card">Credit / Debit Card</option>
+        <option value="Razorpay">Razorpay</option>
+{/*         <option value="Card">Credit / Debit Card</option>
         <option value="Wallet">Wallet</option>
-        <option value="Netbanking">Netbanking</option>
+        <option value="Netbanking">Netbanking</option> */}
       </select>
 
       <div className="payment-summary">
