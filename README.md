@@ -26,7 +26,7 @@ This repository contains a Node.js + Express backend and a React + Vite frontend
 ## Key features
 
 - User registration, login (JWT access/refresh tokens)
-- Product listing, search and product detail pages
+- Product listing, searching ,filtering and product detail pages
 - Cart, wishlist and order flow
 - Payment integration with Razorpay
 - Image uploads using Cloudinary
