@@ -8,7 +8,6 @@ import paymentRouter from "./routes/payment.routes.js";
 import orderRouter from "./routes/order.routes.js";
 import healthRouter from "./routes/health.routes.js";
 import authenticateUser from "./middlewares/authenticateUser.js";
-import healthRouter from "./routes/health.routes.js";
 import dotenv from "dotenv";
 const app = express();
 dotenv.config({
