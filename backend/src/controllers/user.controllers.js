@@ -360,7 +360,7 @@ const uploadAvatar = asyncHandler(async (req, res) => {
 });
 
 const getUserCart = asyncHandler(async (req, res) => {
-  const {id} = req.params;
+  const { id } = req.params;
   // 🧱 Fetch user + populate full product info from cartList
   const userData = await User.findById(id).populate({
     path: "cartList",
@@ -381,7 +381,7 @@ const getUserCart = asyncHandler(async (req, res) => {
 });
 
 const removeFromCart = asyncHandler(async (req, res) => {
-  const {userId }= req.params;
+  const { userId } = req.params;
   const productId = req.params.productId;
   const user = await User.findById(userId);
   if (!user) {
@@ -480,7 +480,7 @@ const saveUserAddress = asyncHandler(async (req, res) => {
 });
 
 const getAllOrders = asyncHandler(async (req, res) => {
-  const {userId}=req.params;
+  const { userId } = req.params;
 
   const user = await User.findById(userId).populate({
     path: "orderList",
